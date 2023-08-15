@@ -1,11 +1,50 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View } from "react-native";
 
-import * as ExpoOverflowViewIssue from 'expo-overflow-view-issue';
-
+import { ExpoOverflowViewIssueView } from "expo-overflow-view-issue";
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>{ExpoOverflowViewIssue.hello()}</Text>
+      <Text>React Native View</Text>
+      <View
+        style={{
+          width: 80,
+          height: 80,
+          backgroundColor: "#000",
+          marginVertical: 20,
+        }}
+      >
+        <View
+          style={{
+            width: 40,
+            height: 20,
+            backgroundColor: "red",
+            position: "absolute",
+            right: -20,
+            top: -10,
+          }}
+        ></View>
+      </View>
+      <Text>Expo View</Text>
+      <ExpoOverflowViewIssueView
+        style={{
+          width: 80,
+          height: 80,
+          backgroundColor: "#000",
+          marginVertical: 20,
+        }}
+        name="ExpoOverflowViewIssueView"
+      >
+        <View
+          style={{
+            width: 40,
+            height: 20,
+            backgroundColor: "red",
+            position: "absolute",
+            right: -20,
+            top: -10,
+          }}
+        />
+      </ExpoOverflowViewIssueView>
     </View>
   );
 }
@@ -13,8 +52,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
